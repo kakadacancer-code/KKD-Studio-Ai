@@ -1,0 +1,9 @@
+-r requirements.txt
+# Large, downloadable open-weight inference packages (no paid API required)
+# For CPU use an appropriate PyTorch wheel per https://pytorch.org/get-started/locally/
+torch>=2.6,<3
+transformers>=4.45,<5
+sentencepiece>=0.2,<1
+sacremoses>=0.1,<1
+faster-whisper>=1.1,<2
+huggingface_hub>=0.26,<1

@@ -1,0 +1,1 @@
+{"root":["./src/main.tsx","./src/components/Shell.tsx","./src/components/UI.tsx","./src/lib/api.ts","./src/lib/state.ts","./src/pages/Dashboard.tsx","./src/pages/Export.tsx","./src/pages/Import.tsx","./src/pages/Models.tsx","./src/pages/Projects.tsx","./src/pages/Settings.tsx","./src/pages/Studio.tsx","./src/pages/Voices.tsx"],"version":"5.9.3"}

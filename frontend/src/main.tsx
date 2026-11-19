@@ -1,0 +1,17 @@
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import {BrowserRouter,Route,Routes} from 'react-router-dom'
+import {QueryClient,QueryClientProvider} from '@tanstack/react-query'
+import {Toaster} from 'sonner'
+import Shell from './components/Shell'
+import Dashboard from './pages/Dashboard'
+import Projects from './pages/Projects'
+import ImportPage from './pages/Import'
+import Studio from './pages/Studio'
+import Voices from './pages/Voices'
+import ExportPage from './pages/Export'
+import Models from './pages/Models'
+import Settings from './pages/Settings'
+import './index.css'
+const client=new QueryClient({defaultOptions:{queries:{retry:1,staleTime:3000}}})
+ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode><QueryClientProvider client={client}><BrowserRouter><Routes><Route element={<Shell/>}><Route index element={<Dashboard/>}/><Route path="projects" element={<Projects/>}/><Route path="import" element={<ImportPage/>}/><Route path="studio/:id" element={<Studio/>}/><Route path="voices/:id" element={<Voices/>}/><Route path="export/:id" element={<ExportPage/>}/><Route path="models" element={<Models/>}/><Route path="settings" element={<Settings/>}/></Route></Routes></BrowserRouter><Toaster position="bottom-right" theme="dark" richColors/></QueryClientProvider></React.StrictMode>)
